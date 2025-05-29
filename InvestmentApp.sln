@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.36105.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentApp", "InvestmentApp.csproj", "{5E3D1FBC-639B-4418-AF1D-5E9956B611A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussines", "..\Bussines\Bussines.csproj", "{03E6394C-3779-4033-8328-A7D7712B6BC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "..\Persistence\Persistence.csproj", "{C83909A5-BAD6-43C8-B68E-177EFE403648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E3D1FBC-639B-4418-AF1D-5E9956B611A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E3D1FBC-639B-4418-AF1D-5E9956B611A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E3D1FBC-639B-4418-AF1D-5E9956B611A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E3D1FBC-639B-4418-AF1D-5E9956B611A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E6394C-3779-4033-8328-A7D7712B6BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E6394C-3779-4033-8328-A7D7712B6BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E6394C-3779-4033-8328-A7D7712B6BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E6394C-3779-4033-8328-A7D7712B6BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C83909A5-BAD6-43C8-B68E-177EFE403648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C83909A5-BAD6-43C8-B68E-177EFE403648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C83909A5-BAD6-43C8-B68E-177EFE403648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C83909A5-BAD6-43C8-B68E-177EFE403648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEDA51F4-27C2-481E-976B-B12DBF49ED35}
+	EndGlobalSection
+EndGlobal

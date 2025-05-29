@@ -1,0 +1,57 @@
+﻿@model List<PaisViewModel>
+@{
+    ViewData["Title"] = "Paises";
+}
+
+<div class="row mb-4">
+    <div class="col text-center">
+        <h1 class="display-4">Paises</h1>
+        <p class="lead">Lista de Paises</p>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col text-start">
+        <a class="btn btn-success" asp-controller="Pais" asp-action="Add">
+            <i class="bi bi-plus-circle"></i> Colocar un Pais
+        </a>
+    </div>
+</div>
+
+<div class="row mt-2">
+    @if (Model.Count == 0)
+    {
+        <div class="col-12 text-center">
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">No hay Paises disponibles</h4>
+                <p>Por favor, agregue un nuevo Pais.</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-primary text-white d-flex align-items-center justify-content-between">
+                        <span><i class="bi bi-flag"></i> @item.Nombre</span>
+                        <span class="badge bg-light text-primary">@item.CodigoIso</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-2">@item.Nombre</h5>
+                        <div class="card-subtitle mb-2">Indicadores: @item.CantidadIndicadores</div>
+                        <p class="card-text text-muted mb-0">Código ISO: <strong>@item.CodigoIso</strong></p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-end gap-2">
+                        <a class="btn btn-outline-warning btn-sm" asp-controller="Pais" asp-action="Edit" asp-route-id="@item.Id">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </a>
+                        <a class="btn btn-outline-danger btn-sm" asp-controller="Pais" asp-action="Delete" asp-route-id="@item.Id">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
