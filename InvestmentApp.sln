@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussines", "..\Bussines\Bus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "..\Persistence\Persistence.csproj", "{C83909A5-BAD6-43C8-B68E-177EFE403648}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persitence", "Persitence", "{73BF8FEE-23E6-46B6-8408-D566BCADF4DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{A608723C-5A6B-4AC6-A5FD-DB7589FFB918}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E3D1FBC-639B-4418-AF1D-5E9956B611A1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{03E6394C-3779-4033-8328-A7D7712B6BC4} = {A608723C-5A6B-4AC6-A5FD-DB7589FFB918}
+		{C83909A5-BAD6-43C8-B68E-177EFE403648} = {73BF8FEE-23E6-46B6-8408-D566BCADF4DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEDA51F4-27C2-481E-976B-B12DBF49ED35}
