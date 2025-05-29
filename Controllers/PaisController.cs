@@ -22,7 +22,7 @@ namespace InvestmentApp.Controllers
         {
             var tso = await _paisService.GetAllWithInclude();
 
-            var listEntitiesVMs = tso.Select(p => new IndicadorViewModel
+            var listEntitiesVMs = tso.Select(p => new PaisViewModel
             {
                 Id = p.Id,
                 CodigoIso = p.CodigoIso,

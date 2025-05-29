@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<InvestContext>(options => options.UseSqlServer(connectionString) );
+
  
 var app = builder.Build();
 

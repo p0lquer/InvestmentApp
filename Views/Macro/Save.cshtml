@@ -1,0 +1,43 @@
+﻿@model SaveMacroViewModel
+@{
+    bool editMode = ViewBag.EditMode ?? false;
+    ViewData["Title"] = "Guardar Macro Indicador";
+}
+
+<div class="col-12 col-md-6 offset-md-3">
+    <div class="card">
+        <div class="card-header bg-success text-bg-light">
+            <h1 class="text-center">@(editMode ? "Editar - " + Model.Nombre : "Nuevo Macro Indicador") </h1>
+        </div>
+        <div class="card-body">
+            <form asp-controller="Macro" asp-action="@(editMode ? "Edit" : "Add")" method="POST">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="MacroInd" id="MacroInd" />
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label">Nombre</label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Peso" class="form-label">Peso</label>
+                    <input asp-for="Peso" class="form-control" id="PesoInput" />
+                    <span asp-validation-for="Peso" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                    <a asp-controller="Macro" asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('PesoInput').addEventListener('input', function () {
+            var peso = parseFloat(this.value.replace(',', '.'));
+            var macroInd = peso < 0.5;
+            document.getElementById('MacroInd').value = macroInd;
+        });
+    </script>
+}
